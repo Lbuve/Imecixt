@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function mostrarDetalles(nombreProducto) {
     // Buscar el producto en los datos
     let productoEncontrado = null;
-    
+
     for (let categoria in productosData) {
         const producto = productosData[categoria].productos.find(p => p.nombre === nombreProducto);
         if (producto) {
@@ -268,74 +268,88 @@ function mostrarDetalles(nombreProducto) {
             break;
         }
     }
-    
+
     if (!productoEncontrado || !productoEncontrado.detalles) {
         alert('Información no disponible. Contáctanos para más detalles.');
         return;
     }
-    
+
     const detalles = productoEncontrado.detalles;
-    
-    // Crear el HTML del modal
+    const tieneImagen = productoEncontrado.imagen && productoEncontrado.imagen.trim() !== '';
+
+    // Crear el HTML del modal con layout de dos columnas
     const modalHTML = `
         <div class="modal-overlay" id="modalOverlay" onclick="cerrarModal()">
             <div class="modal-content" onclick="event.stopPropagation()">
                 <button class="modal-close" onclick="cerrarModal()">
                     <i class="fas fa-times"></i>
                 </button>
-                
-                <div class="modal-header">
-                    <div class="modal-icon ${productoEncontrado.colorIcono}">
-                        <i class="fas ${productoEncontrado.icono}"></i>
-                    </div>
-                    <h2 class="modal-title">${productoEncontrado.nombre}</h2>
-                    <p class="modal-subtitle">${productoEncontrado.descripcion}</p>
+
+                <!-- Columna Izquierda: Imagen -->
+                <div class="modal-image-section">
+                    ${tieneImagen
+                        ? `<img src="${productoEncontrado.imagen}" alt="${productoEncontrado.nombre}" class="modal-product-image">`
+                        : `<div class="modal-icon-large ${productoEncontrado.colorIcono}">
+                             <i class="fas ${productoEncontrado.icono}"></i>
+                           </div>`
+                    }
+                    <h3 class="modal-image-title">${productoEncontrado.nombre}</h3>
                 </div>
-                
-                <div class="modal-body">
-                    <div class="modal-section">
-                        <h3><i class="fas fa-check-circle"></i> Características Técnicas</h3>
-                        <ul class="modal-list">
-                            ${detalles.caracteristicas.map(car => `<li>${car}</li>`).join('')}
-                        </ul>
+
+                <!-- Columna Derecha: Información -->
+                <div class="modal-info-section">
+                    <div class="modal-scrollable-content">
+                        <div class="modal-header-compact">
+                            <h2 class="modal-title-large">${productoEncontrado.nombre}</h2>
+                            <p class="modal-subtitle-large">${productoEncontrado.descripcion}</p>
+                        </div>
+
+                        <div class="modal-details-grid">
+                            <div class="modal-detail-block">
+                                <h3><i class="fas fa-check-circle"></i> Características Técnicas</h3>
+                                <ul class="modal-features-list">
+                                    ${detalles.caracteristicas.map(car => `<li>${car}</li>`).join('')}
+                                </ul>
+                            </div>
+
+                            <div class="modal-detail-block">
+                                <h3><i class="fas fa-briefcase"></i> Usos Recomendados</h3>
+                                <p>${detalles.usos}</p>
+                            </div>
+
+                            <div class="modal-detail-block">
+                                <h3><i class="fas fa-shield-alt"></i> Garantía</h3>
+                                <p>${detalles.garantia}</p>
+                            </div>
+
+                            <div class="modal-detail-block">
+                                <h3><i class="fas fa-certificate"></i> Certificación</h3>
+                                <p>${detalles.certificacion}</p>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="modal-section">
-                        <h3><i class="fas fa-briefcase"></i> Usos Recomendados</h3>
-                        <p>${detalles.usos}</p>
+
+                    <div class="modal-footer-compact">
+                        <a href="https://wa.me/51930210841?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(productoEncontrado.nombre)}"
+                           target="_blank"
+                           class="modal-btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                        </a>
+                        <button onclick="cerrarModal()" class="modal-btn-secondary">
+                            Cerrar
+                        </button>
                     </div>
-                    
-                    <div class="modal-section">
-                        <h3><i class="fas fa-shield-alt"></i> Garantía</h3>
-                        <p>${detalles.garantia}</p>
-                    </div>
-                    
-                    <div class="modal-section">
-                        <h3><i class="fas fa-certificate"></i> Certificación</h3>
-                        <p>${detalles.certificacion}</p>
-                    </div>
-                </div>
-                
-                <div class="modal-footer">
-                    <a href="https://wa.me/51930210841?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(productoEncontrado.nombre)}" 
-                       target="_blank" 
-                       class="modal-btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                    </a>
-                    <button onclick="cerrarModal()" class="modal-btn-secondary">
-                        Cerrar
-                    </button>
                 </div>
             </div>
         </div>
     `;
-    
+
     // Agregar el modal al body
     document.body.insertAdjacentHTML('beforeend', modalHTML);
-    
+
     // Prevenir scroll del body
     document.body.style.overflow = 'hidden';
-    
+
     // Animación de entrada
     setTimeout(() => {
         document.getElementById('modalOverlay').classList.add('active');
