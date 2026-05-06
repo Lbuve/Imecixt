@@ -343,3 +343,11 @@ header.scrolled {
         transform: translateY(0);
     }
 }
+
+/* ==========================================
+   OFFSET PARA SECCIONES CON ANCLAJE
+   Compensar altura del header fijo
+========================================== */
+[id] {
+    scroll-margin-top: 100px;
+}

@@ -6,23 +6,24 @@
 const headerHTML = `
     <header>
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">
                     <img src="img/logo.png" alt="IMECIXT Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
             </a>
             
             <nav class="nav-desktop">
-                <a href="#inicio">Inicio</a>
-                <a href="#productos">Productos</a>
-                <a href="#contacto">Contacto</a>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#sobre-nosotros">Nosotros</a>
+                <a href="productos.html">Productos</a>
+                <a href="index.html#contacto">Contacto</a>
             </nav>
             
             <div class="social-icons">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -33,14 +34,15 @@ const headerHTML = `
         </div>
         
         <nav class="nav-mobile" id="navMobile">
-            <a href="#inicio">Inicio</a>
-            <a href="#productos">Productos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#sobre-nosotros">Nosotros</a>
+            <a href="productos.html">Productos</a>
+            <a href="index.html#contacto">Contacto</a>
             <div class="mobile-social">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
             </div>
@@ -114,10 +116,10 @@ const footerHTML = `
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <div class="footer-social">
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
