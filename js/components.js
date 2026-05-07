@@ -281,7 +281,7 @@ function initSearchAndFilters() {
 
 function applyFilters() {
     const allCards = document.querySelectorAll('.product-card');
-    const allSections = document.querySelectorAll('.category-section');
+    const allSections = document.querySelectorAll('.category-wrapper');
     let visibleCount = 0;
     
     // Filtrar tarjetas
