@@ -205,7 +205,7 @@ function crearProductCard(producto, categoryKey) {
             </div>
             <p class="product-desc">${producto.descripcion}</p>
             <button class="product-btn" onclick="mostrarDetallesVariante('${producto.nombre}', '${producto.defaultVariant}')">
-                Ver Más <i class="fas fa-arrow-right"></i>
+                Info <i class="fas fa-info-circle"></i>
             </button>
         </div>
     `;
@@ -451,7 +451,7 @@ function mostrarDetallesVariante(nombreProducto, variantId) {
     
     const variante = productoEncontrado.variantes.find(v => v.id === variantId);
     if (!variante || !variante.detalles) {
-        alert('Información no disponible para esta variante. Contáctanos para más detalles.');
+        alert('Primero debes seleccionar el tamaño o cantidad y despues presiona info');
         return;
     }
     

@@ -391,7 +391,7 @@
 
     .modal-content {
         border-radius: 1.25rem 1.25rem 0 0;
-        max-height: 90vh;
+        max-height: 85vh;
         transform: translateY(100%);
         transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
@@ -401,70 +401,113 @@
     }
 
     .modal-image-section {
-        padding: 1.5rem 1rem;
-        min-height: 160px;
+        padding: 1rem 1rem 0.75rem;
+        min-height: auto;
+        flex-direction: row;
+        gap: 0.75rem;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .modal-product-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 16px;
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        border-width: 2px;
     }
 
     .modal-icon-large {
-        width: 80px;
-        height: 80px;
-        border-radius: 16px;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
     }
 
     .modal-icon-large i {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .modal-image-title {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        margin-top: 0;
+        text-align: left;
+        flex: 1;
+    }
+
+    .modal-variant-badge {
+        margin-top: 0.25rem;
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+        display: inline-block;
     }
 
     .modal-scrollable-content {
-        padding: 1.25rem;
-    }
-
-    .modal-title-large {
-        font-size: 1.25rem;
-    }
-
-    .modal-subtitle-large {
-        font-size: 0.9rem;
-    }
-
-    .modal-detail-block {
         padding: 1rem;
     }
 
+    .modal-header-compact {
+        padding-bottom: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .modal-title-large {
+        font-size: 1.1rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .modal-subtitle-large {
+        font-size: 0.8rem;
+    }
+
+    .modal-detail-block {
+        padding: 0.75rem;
+        border-radius: 0.75rem;
+    }
+
     .modal-detail-block h3 {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-detail-block h3 i {
         font-size: 0.85rem;
     }
 
     .modal-detail-block p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .modal-features-list li {
+        font-size: 0.8rem;
+        padding: 0.35rem 0;
+        padding-left: 1.25rem;
     }
 
     .modal-footer-compact {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        flex-direction: row;
+        gap: 0.5rem;
     }
 
-    .modal-btn-whatsapp,
+    .modal-btn-whatsapp {
+        flex: 1;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.8rem;
+        border-radius: 10px;
+    }
+
     .modal-btn-secondary {
-        width: 100%;
-        padding: 0.75rem 1rem;
+        flex: 0 0 auto;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.8rem;
+        border-radius: 10px;
     }
 
     .modal-close {
-        top: 0.75rem;
-        right: 0.75rem;
-        width: 36px;
-        height: 36px;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
     }
 }
