@@ -255,43 +255,86 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // ACTIVE NAVIGATION HIGHLIGHT
     // ==========================================
-    function setActiveNavigation() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const currentHash = window.location.hash;
-        
+    function setActiveNavigation(navItem) {
         // Remove all active classes first
         document.querySelectorAll('[data-nav]').forEach(link => {
             link.classList.remove('active');
         });
         
-        // Determine which nav item should be active
-        let activeNav = null;
-        
-        if (currentPage === 'productos.html') {
-            activeNav = 'productos';
-        } else if (currentPage === 'index.html' || currentPage === '') {
-            if (currentHash === '#contacto') {
-                activeNav = 'contacto';
-            } else if (currentHash === '#sobre-nosotros') {
-                activeNav = 'nosotros';
-            } else {
-                activeNav = 'inicio';
-            }
-        }
-        
         // Add active class to the appropriate nav item
-        if (activeNav) {
-            document.querySelectorAll(`[data-nav="${activeNav}"]`).forEach(link => {
+        if (navItem) {
+            document.querySelectorAll(`[data-nav="${navItem}"]`).forEach(link => {
                 link.classList.add('active');
             });
         }
     }
     
+    function updateActiveNavFromHash() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const currentHash = window.location.hash;
+        
+        if (currentPage === 'productos.html') {
+            setActiveNavigation('productos');
+        } else if (currentPage === 'index.html' || currentPage === '') {
+            if (currentHash === '#contacto') {
+                setActiveNavigation('contacto');
+            } else if (currentHash === '#sobre-nosotros') {
+                setActiveNavigation('nosotros');
+            } else {
+                setActiveNavigation('inicio');
+            }
+        }
+    }
+    
     // Set active navigation on load
-    setActiveNavigation();
+    updateActiveNavFromHash();
     
     // Update active navigation when hash changes
-    window.addEventListener('hashchange', setActiveNavigation);
+    window.addEventListener('hashchange', updateActiveNavFromHash);
+    
+    // ==========================================
+    // SCROLL-BASED NAVIGATION DETECTION
+    // ==========================================
+    function initScrollSpy() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        // Only apply scroll spy on index.html
+        if (currentPage !== 'index.html' && currentPage !== '') return;
+        
+        const sections = [
+            { id: 'inicio', nav: 'inicio' },
+            { id: 'sobre-nosotros', nav: 'nosotros' },
+            { id: 'contacto', nav: 'contacto' }
+        ];
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const section = sections.find(s => s.id === entry.target.id);
+                    if (section) {
+                        setActiveNavigation(section.nav);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe each section
+        sections.forEach(section => {
+            const element = document.getElementById(section.id);
+            if (element) {
+                observer.observe(element);
+            }
+        });
+    }
+    
+    // Initialize scroll spy after a short delay to ensure DOM is ready
+    setTimeout(initScrollSpy, 100);
     
 });
 
