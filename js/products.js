@@ -143,10 +143,11 @@ const accesoriosData = {
                 nombre: "Gabinetes",
                 descripcion: "Gabinetes para protección de extintores.",
                 icono: "fa-box",
-        colorIcono: "icon-gray",
-                defaultVariant: "metal",
+                colorIcono: "icon-gray",
+                defaultVariant: "4-6kg",
                 variantes: [
-                    { id: "gabinete-metal", label: "METAL", imagen: "img/productos/gabinete.jpg", detalles: { caracteristicas: ["Material: Metal resistente", "Con cerradura", "Visor transparente", "Para extintores 6-12 kg"], usos: "Protección de extintores en interiores/exteriores.", garantia: "1 año de garantía.", certificacion: "Resistente a intemperie." } }
+                    { id: "gabinete-4-6kg", label: "4-6 KG", imagen: "img/productos/gabinete-4-6kg.jpg", detalles: { caracteristicas: ["Para extintores 4-6 kg", "Material: Metal resistente", "Con cerradura", "Visor transparente"], usos: "Protección de extintores pequeños en interiores/exteriores.", garantia: "1 año de garantía.", certificacion: "Resistente a intemperie." } },
+                    { id: "gabinete-9-12kg", label: "9-12 KG", imagen: "img/productos/gabinete-9-12kg.jpg", detalles: { caracteristicas: ["Para extintores 9-12 kg", "Material: Metal resistente", "Con cerradura", "Visor transparente"], usos: "Protección de extintores medianos en interiores/exteriores.", garantia: "1 año de garantía.", certificacion: "Resistente a intemperie." } }
                 ]
             },
             {
@@ -310,11 +311,11 @@ const seguridadVialData = {
                 nombre: "Triángulos de Seguridad",
                 descripcion: "Triángulos reflectivos homologados para vehículos.",
                 icono: "fa-exclamation-triangle",
-        colorIcono: "icon-orange",
-                defaultVariant: "standard",
+                colorIcono: "icon-orange",
+                defaultVariant: "estandar",
                 variantes: [
-                    { id: "triangulo-std", label: "ESTÁNDAR", imagen: "img/productos/triangulo.jpg", detalles: { caracteristicas: ["Set de 3 triángulos", "Base plegable", "Reflectivo homologado", "Estuche incluido"], usos: "Vehículos, emergencias.", garantia: "1 año de garantía.", certificacion: "Homologado MTTC." } },
-                    { id: "triangulo-premium", label: "PREMIUM", imagen: "img/productos/triangulo.jpg", detalles: { caracteristicas: ["Set de 3 triángulos", "Base metálica", "Reflectivo 3M", "Estuche rígido"], usos: "Vehículos pesados, profesional.", garantia: "2 años de garantía.", certificacion: "Homologado MTTC." } }
+                    { id: "estandar", label: "ESTÁNDAR", imagen: "img/productos/triangulo-estandar.jpg", detalles: { caracteristicas: ["TRIÁNGULOS DE SEGURIDAD - SET X2", "COD: TS001", "Viene con su envase que porta el par de triángulos", "Altura: 36 cm"], usos: "Vehículos, emergencias.", garantia: "1 año de garantía.", certificacion: "Homologado MTTC." } },
+                    { id: "premium", label: "PREMIUM", imagen: "img/productos/triangulo-premium.jpg", detalles: { caracteristicas: ["TRIÁNGULOS DE SEGURIDAD - SET X2", "COD: TS002", "Viene con su envase que porta el par de triángulos", "Altura: 36 cm", "Base metálica reforzada"], usos: "Vehículos pesados, profesional.", garantia: "2 años de garantía.", certificacion: "Homologado MTTC." } }
                 ]
             },
             {
@@ -334,47 +335,48 @@ const seguridadVialData = {
                 nombre: "Paletas y Cintas de Señalización",
                 descripcion: "Paletas para tráfico y cintas de delimitación.",
                 icono: "fa-hand-paper",
-        colorIcono: "icon-orange",
-                defaultVariant: "paletas",
+                colorIcono: "icon-orange",
+                defaultVariant: "paleta",
                 variantes: [
-                    { id: "paleta-alto", label: "PALETA ALTO", imagen: "img/productos/paleta.jpg", detalles: { caracteristicas: ["Señal: ALTO/PARE", "Mango de madera", "Cara reflectiva", "Diámetro: 30 cm"], usos: "Control de tráfico, peajes.", garantia: "1 año de garantía.", certificacion: "Reflectivo homologado." } },
-                    { id: "paleta-dir", label: "PALETA DIRECCIÓN", imagen: "img/productos/paleta.jpg", detalles: { caracteristicas: ["Señal: Flecha direccional", "Mango de madera", "Cara reflectiva", "Doble cara"], usos: "Control de tráfico, obras.", garantia: "1 año de garantía.", certificacion: "Reflectivo homologado." } },
-                    { id: "cinta-100m", label: "CINTA 100M", imagen: "img/productos/cinta.jpg", detalles: { caracteristicas: ["Longitud: 100 metros", "Material: Polipropileno", "Colores: Rojo/Blanco o Amarillo/Negro", "Resistente"], usos: "Delimitación de zonas, obras.", garantia: "Garantía de calidad.", certificacion: "Resistente a intemperie." } }
+                    { id: "paleta", label: "PALETA", imagen: "img/productos/paleta.jpg", detalles: { caracteristicas: ["Señal: PARE Y SIGA", "Ancho: 30 cm", "Alto: 46 cm", "Espesor: 0.5 cm", "Material: PVC", "Señal SIGA: Verde", "Señal PARE: Rojo"], usos: "Control de tráfico, peajes, obras.", garantia: "1 año de garantía.", certificacion: "Reflectivo homologado." } },
+                    { id: "cinta", label: "CINTA", imagen: "img/productos/cinta.jpg", detalles: { caracteristicas: ["Cintas de seguridad de señalización", "Ancho: 13 cm", "Espesor: 0.1 cm", "Largo: 200 m", "Material: Polietileno"], usos: "Delimitación de zonas, obras.", garantia: "Garantía de calidad.", certificacion: "Resistente a intemperie." } }
                 ]
             },
             {
                 nombre: "Mallas de Seguridad",
-                descripcion: "Mallas para delimitación y protección.",
+                descripcion: "Malla de seguridad reticulada para delimitación y protección.",
                 icono: "fa-border-all",
-        colorIcono: "icon-orange",
-                defaultVariant: "naranja",
+                colorIcono: "icon-orange",
+                defaultVariant: "malla-spro",
                 variantes: [
-                    { id: "malla-naranja", label: "NARANJA", imagen: "img/productos/malla.jpg", detalles: { caracteristicas: ["Color: Naranja", "Material: Polietileno", "Rollo: 50m x 1m", "UV resistente"], usos: "Obras, delimitación, protección.", garantia: "1 año de garantía.", certificacion: "UV resistente." } },
-                    { id: "malla-verde", label: "VERDE", imagen: "img/productos/malla.jpg", detalles: { caracteristicas: ["Color: Verde oscuro", "Material: Polietileno", "Rollo: 50m x 1m", "UV resistente"], usos: "Protección visual, obras.", garantia: "1 año de garantía.", certificacion: "UV resistente." } }
+                    { id: "malla-spro", label: "MALLA SPRO", imagen: "img/productos/malla.jpg", detalles: { caracteristicas: ["Malla de seguridad reticulada naranja en rollo", "Medida: 1 metro x 50 yardas (45.7 m)", "Peso: 2.5 kg por rollo", "Material: Polietileno de alta densidad", "Resistente a rayos UV, agentes atmosféricos y estiramiento"], usos: "Obras, delimitación, protección.", garantia: "1 año de garantía.", certificacion: "UV resistente." } }
                 ]
             },
             {
                 nombre: "Tacos PVC y Madera",
                 descripcion: "Tacos para delimitación de estacionamientos y carriles.",
                 icono: "fa-road",
-        colorIcono: "icon-yellow",
-                defaultVariant: "pvc-naranja",
+                colorIcono: "icon-yellow",
+                defaultVariant: "pvc-5tn",
                 variantes: [
-                    { id: "taco-pvc-nj", label: "PVC NARANJA", imagen: "img/productos/taco_naranja.jpg", detalles: { caracteristicas: ["Altura: 50 cm", "Material: PVC flexible", "Color: Naranja", "Base negra"], usos: "Delimitación de carriles.", garantia: "Resistente a impactos.", certificacion: "Base antideslizante." } },
-                    { id: "taco-pvc-am", label: "PVC AMARILLO", imagen: "img/productos/taco_amarillo.jpg", detalles: { caracteristicas: ["Altura: 50 cm", "Material: PVC flexible", "Color: Amarillo", "Base negra"], usos: "Zonas de precaución.", garantia: "Material UV resistente.", certificacion: "Alta visibilidad." } },
-                    { id: "taco-madera", label: "MADERA", imagen: "img/productos/taco_madera.jpg", detalles: { caracteristicas: ["Material: Madera dura", "Dimensiones: 15x10 cm", "Banda reflectiva", "Tratada"], usos: "Construcción, uso pesado.", garantia: "Resistente.", certificacion: "Madera tratada." } }
+                    { id: "pvc-5tn", label: "PVC 5 TN", imagen: "img/productos/taco-pvc-5tn.jpg", detalles: { caracteristicas: ["COD: TPV5", "Capacidad: 5 TN", "Medidas: 17x16x24.5 cm", "Colores disponibles: Naranja, Amarillo, Verde"], usos: "Delimitación de carriles, estacionamientos.", garantia: "Resistente a impactos.", certificacion: "Base antideslizante." } },
+                    { id: "pvc-8tn", label: "PVC 8 TN", imagen: "img/productos/taco-pvc-8tn.jpg", detalles: { caracteristicas: ["COD: TPV8", "Capacidad: 8 TN", "Medidas: 19x20x32 cm", "Colores disponibles: Naranja, Amarillo, Verde"], usos: "Delimitación de carriles, zonas de precaución.", garantia: "Material UV resistente.", certificacion: "Alta visibilidad." } },
+                    { id: "pvc-12tn", label: "PVC 12 TN", imagen: "img/productos/taco-pvc-12tn.jpg", detalles: { caracteristicas: ["COD: TPV12", "Capacidad: 12 TN", "Medidas: 26x20x38.5 cm", "Colores disponibles: Naranja, Amarillo, Verde"], usos: "Delimitación pesada, uso industrial.", garantia: "Máxima resistencia.", certificacion: "Base antideslizante reforzada." } },
+                    { id: "madera-chico", label: "MADERA CHICO", imagen: "img/productos/taco-madera-chico.jpg", detalles: { caracteristicas: ["Modelo Chico", "Medidas: 15x19.8x15 cm", "Material: Madera dura", "Con asa metálica"], usos: "Construcción, uso pesado.", garantia: "Resistente.", certificacion: "Madera tratada." } },
+                    { id: "madera-mediano", label: "MADERA MEDIANO", imagen: "img/productos/taco-madera-mediano.jpg", detalles: { caracteristicas: ["Modelo Mediano", "Medidas: 17.5x30x16 cm", "Material: Madera dura", "Con asa metálica"], usos: "Construcción, uso pesado.", garantia: "Resistente.", certificacion: "Madera tratada." } },
+                    { id: "madera-grande", label: "MADERA GRANDE", imagen: "img/productos/taco-madera-grande.jpg", detalles: { caracteristicas: ["Modelo Grande", "Medidas: 19.5x30x20 cm", "Material: Madera dura", "Con asa metálica"], usos: "Construcción, uso pesado.", garantia: "Resistente.", certificacion: "Madera tratada." } }
                 ]
             },
             {
                 nombre: "Cinta Reflectiva 3M",
                 descripcion: "Cinta reflectiva de alta calidad para señalización.",
                 icono: "fa-tape",
-        colorIcono: "icon-yellow",
-                defaultVariant: "blanca",
+                colorIcono: "icon-yellow",
+                defaultVariant: "rojo-blanco",
                 variantes: [
-                    { id: "reflectiva-blanca", label: "BLANCA", imagen: "img/productos/cinta-3m.jpg", detalles: { caracteristicas: ["Marca: 3M o equivalente", "Color: Blanco", "Rollo: 45.7m", "Grado diamante o ingeniería"], usos: "Señalización de vehículos, postes.", garantia: "Garantía de autenticidad.", certificacion: "3M original o equivalente." } },
-                    { id: "reflectiva-roja", label: "ROJA", imagen: "img/productos/cinta-3m.jpg", detalles: { caracteristicas: ["Marca: 3M o equivalente", "Color: Rojo", "Rollo: 45.7m", "Grado diamante o ingeniería"], usos: "Señalización de peligro.", garantia: "Garantía de autenticidad.", certificacion: "3M original o equivalente." } },
-                    { id: "reflectiva-combinada", label: "ROJO/BLANCO", imagen: "img/productos/cinta-3m.jpg", detalles: { caracteristicas: ["Marca: 3M o equivalente", "Colores: Rojo/Blanco", "Rollo: 45.7m", "Patrón alternado"], usos: "Contenedores, vehículos largos.", garantia: "Garantía de autenticidad.", certificacion: "3M original o equivalente." } }
+                    { id: "rojo-blanco", label: "ROJO/BLANCO 2\" X 45.7 M", imagen: "img/productos/cinta-rojo-blanco.jpg", detalles: { caracteristicas: ["Marca: 3M o equivalente", "Colores: Rojo/Blanco", "Medida: 2\" x 45.7m", "Grado diamante o ingeniería"], usos: "Contenedores, vehículos largos.", garantia: "Garantía de autenticidad.", certificacion: "3M original o equivalente." } },
+                    { id: "rojo", label: "ROJO 2\" X 45.7 M", imagen: "img/productos/cinta-rojo.jpg", detalles: { caracteristicas: ["Marca: 3M o equivalente", "Color: Rojo", "Medida: 2\" x 45.7m", "Grado diamante o ingeniería"], usos: "Señalización de peligro.", garantia: "Garantía de autenticidad.", certificacion: "3M original o equivalente." } },
+                    { id: "verde", label: "VERDE 2\" X 45.7 M", imagen: "img/productos/cinta-verde.jpg", detalles: { caracteristicas: ["Marca: 3M o equivalente", "Color: Verde", "Medida: 2\" x 45.7m", "Grado diamante o ingeniería"], usos: "Señalización de vehículos, postes.", garantia: "Garantía de autenticidad.", certificacion: "3M original o equivalente." } }
                 ]
             },
             {
@@ -416,27 +418,14 @@ const lucesData = {
                 ]
             },
             {
-                nombre: "Señaléticas Vinil Adhesivo",
-                descripcion: "Señales en vinil autoadhesivo.",
+                nombre: "Señaletas",
+                descripcion: "Señales de seguridad en vinil adhesivo y fotoluminiscentes.",
                 icono: "fa-sign",
-        colorIcono: "icon-green",
-                defaultVariant: "extintor",
+                colorIcono: "icon-green",
+                defaultVariant: "vinil",
                 variantes: [
-                    { id: "vinil-extintor", label: "EXTINTOR", imagen: "img/productos/senaletica.jpg", detalles: { caracteristicas: ["Material: Vinil adhesivo", "Tamaño: 20x30 cm", "Colores vivos", "Fácil instalación"], usos: "Marcado de extintores.", garantia: "Duradero 3 años.", certificacion: "NTP 399.010." } },
-                    { id: "vinil-salida", label: "SALIDA EMERGENCIA", imagen: "img/productos/senaletica.jpg", detalles: { caracteristicas: ["Material: Vinil adhesivo", "Tamaño: 20x30 cm", "Flecha direccional", "Resistente"], usos: "Señalización de rutas.", garantia: "Duradero 3 años.", certificacion: "NTP 399.010." } },
-                    { id: "vinil-evacuacion", label: "EVACUACIÓN", imagen: "img/productos/senaletica.jpg", detalles: { caracteristicas: ["Material: Vinil adhesivo", "Símbolo evacuación", "Tamaño: 20x30 cm", "Resistente"], usos: "Señalización de evacuación.", garantia: "Duradero 3 años.", certificacion: "NTP 399.010." } }
-                ]
-            },
-            {
-                nombre: "Señaléticas Fotoluminiscentes",
-                descripcion: "Señales que brillan en la oscuridad.",
-                icono: "fa-sign",
-        colorIcono: "icon-green",
-                defaultVariant: "salida",
-                variantes: [
-                    { id: "foto-salida", label: "SALIDA", imagen: "img/productos/senaletica-foto.jpg", detalles: { caracteristicas: ["Material: PVC fotoluminiscente", "Brilla en oscuridad", "Carga con luz natural/artificial", "Duración: 6-8 horas"], usos: "Rutas de evacuación nocturna.", garantia: "Duradero 5 años.", certificacion: "NTP 399.010-1." } },
-                    { id: "foto-extintor", label: "EXTINTOR", imagen: "img/productos/senaletica-foto.jpg", detalles: { caracteristicas: ["Material: Fotoluminiscente", "Símbolo extintor", "Brilla en oscuridad", "Autoadhesivo"], usos: "Ubicación extintores en oscuridad.", garantia: "Duradero 5 años.", certificacion: "NTP 399.010-1." } },
-                    { id: "foto-escaleras", label: "ESCALERAS", imagen: "img/productos/senaletica-foto.jpg", detalles: { caracteristicas: ["Material: Fotoluminiscente", "Símbolo escalera", "Brilla en oscuridad", "Tamaño: 20x30 cm"], usos: "Señalización de escaleras.", garantia: "Duradero 5 años.", certificacion: "NTP 399.010-1." } }
+                    { id: "vinil", label: "Vinil Adhesivo", imagen: "img/productos/senaletica.jpg", detalles: { caracteristicas: ["Material: Vinil adhesivo", "Tamaño: 20x30 cm", "Colores vivos", "Fácil instalación", "Disponible: Extintor, Salida Emergencia, Evacuación"], usos: "Marcado de extintores, rutas de evacuación, señalización general.", garantia: "Duradero 3 años.", certificacion: "NTP 399.010." } },
+                    { id: "fotoluminiscente", label: "Fotoluminiscentes", imagen: "img/productos/senaletica-foto.jpg", detalles: { caracteristicas: ["Material: PVC fotoluminiscente", "Brilla en oscuridad", "Carga con luz natural/artificial", "Duración: 6-8 horas", "Disponible: Salida, Extintor, Escaleras"], usos: "Rutas de evacuación nocturna, ubicación de extintores y escaleras en oscuridad.", garantia: "Duradero 5 años.", certificacion: "NTP 399.010-1." } }
                 ]
             }
         ]
