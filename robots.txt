@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://imecixt.com.pe/sitemap.xml
+
+# Crawl delay para no sobrecargar el servidor
+Crawl-delay: 1
