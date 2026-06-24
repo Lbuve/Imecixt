@@ -1,0 +1,29 @@
+{
+  "name": "IMECIXT - Productos de Seguridad",
+  "short_name": "IMECIXT",
+  "description": "Expertos en extintores, equipos de seguridad y EPP en Trujillo, Perú",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF6B35",
+  "icons": [
+    {
+      "src": "img/logo2.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "img/logo2.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/logo2.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
