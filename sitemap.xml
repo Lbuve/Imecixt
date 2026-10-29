@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<<<<<<< HEAD
   <url><loc>https://imecixt.com.pe/</loc></url>
   <url><loc>https://imecixt.com.pe/productos.html</loc></url>
   <url><loc>https://imecixt.com.pe/extintores-trujillo/</loc></url>
@@ -12,4 +13,18 @@
   <url><loc>https://imecixt.com.pe/extintores-para-restaurantes-trujillo/</loc></url>
   <url><loc>https://imecixt.com.pe/extintores-para-oficinas-trujillo/</loc></url>
   <url><loc>https://imecixt.com.pe/extintores-para-empresas-trujillo/</loc></url>
+=======
+    <url>
+        <loc>https://imecixt.com.pe/</loc>
+        <lastmod>2026-06-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://imecixt.com.pe/productos.html</loc>
+        <lastmod>2026-06-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+>>>>>>> 538f673e4a6a3cd19681da4659766bb844cdbbd8
 </urlset>
