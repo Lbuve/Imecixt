@@ -16,33 +16,63 @@ const headerHTML = `
                 <a href="index.html" data-nav="inicio">Inicio</a>
                 <a href="index.html#sobre-nosotros" data-nav="nosotros">Nosotros</a>
                 <a href="index.html#contacto" data-nav="contacto">Contacto</a>
+                <details class="nav-services">
+                    <summary data-nav="servicios">Servicios</summary>
+                    <div class="nav-services-menu">
+                        <a href="extintores-trujillo/index.html">Extintores en Trujillo</a>
+                        <a href="venta-extintores-trujillo/index.html">Venta de extintores</a>
+                        <a href="recarga-extintores-trujillo/index.html">Recarga de extintores</a>
+                        <a href="mantenimiento-extintores-trujillo/index.html">Mantenimiento</a>
+                        <a href="inspeccion-extintores-trujillo/index.html">Inspección</a>
+                        <a href="extintores-pqs-trujillo/index.html">Extintores PQS</a>
+                        <a href="extintores-co2-trujillo/index.html">Extintores CO2</a>
+                        <a href="extintores-para-restaurantes-trujillo/index.html">Para restaurantes</a>
+                        <a href="extintores-para-oficinas-trujillo/index.html">Para oficinas</a>
+                        <a href="extintores-para-empresas-trujillo/index.html">Para empresas</a>
+                    </div>
+                </details>
                 <a href="productos.html" data-nav="productos">Productos</a>
             </nav>
-            
+
             <div class="social-icons">
-                <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
             
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMobile">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         
-        <nav class="nav-mobile" id="navMobile">
+        <nav class="nav-mobile" id="navMobile" aria-label="Navegación principal">
             <a href="index.html" data-nav="inicio">Inicio</a>
             <a href="index.html#sobre-nosotros" data-nav="nosotros">Nosotros</a>
             <a href="index.html#contacto" data-nav="contacto">Contacto</a>
+            <details class="nav-services">
+                <summary data-nav="servicios">Servicios</summary>
+                <div class="nav-services-menu">
+                    <a href="extintores-trujillo/index.html">Extintores en Trujillo</a>
+                    <a href="venta-extintores-trujillo/index.html">Venta de extintores</a>
+                    <a href="recarga-extintores-trujillo/index.html">Recarga de extintores</a>
+                    <a href="mantenimiento-extintores-trujillo/index.html">Mantenimiento</a>
+                    <a href="inspeccion-extintores-trujillo/index.html">Inspección</a>
+                    <a href="extintores-pqs-trujillo/index.html">Extintores PQS</a>
+                    <a href="extintores-co2-trujillo/index.html">Extintores CO2</a>
+                    <a href="extintores-para-restaurantes-trujillo/index.html">Para restaurantes</a>
+                    <a href="extintores-para-oficinas-trujillo/index.html">Para oficinas</a>
+                    <a href="extintores-para-empresas-trujillo/index.html">Para empresas</a>
+                </div>
+            </details>
             <a href="productos.html" data-nav="productos">Productos</a>
             <div class="mobile-social">
-                <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
-                <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
             </div>
@@ -91,7 +121,7 @@ const footerHTML = `
             
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p><i class="fas fa-phone"></i> 997 437 390 / 979 771 512</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+51997437390">997 437 390</a> / <a href="tel:+51979771512">979 771 512</a></p>
                 <p><i class="fas fa-envelope"></i> seguridad.imeci@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Federico Villarreal, Trujillo 13001<br>Au. Panamericana S/N, Moche 13014 - Perú</p>
             </div>
@@ -99,10 +129,10 @@ const footerHTML = `
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/imecixt?igsh=cjNvamJreGIwdW0x" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -110,7 +140,7 @@ const footerHTML = `
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 IMECIXT. Todos los derechos reservados.</p>
+            <p>&copy; ${new Date().getFullYear()} IMECIXT. Todos los derechos reservados.</p>
             <p class="footer-dev">Asesor: Roger Blas Reyes</p>
         </div>
     </footer>
@@ -195,6 +225,8 @@ function crearProductCard(producto, categoryKey) {
                      src="${defaultVariant?.imagen || ''}" 
                      alt="${producto.nombre}" 
                      class="product-image"
+                     loading="lazy"
+                     decoding="async"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="product-icon-fallback ${producto.colorIcono}" style="display: none;">
                     <i class="fas ${producto.icono}"></i>

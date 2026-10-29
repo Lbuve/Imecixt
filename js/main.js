@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuToggle && navMobile) {
         menuToggle.addEventListener('click', function() {
             navMobile.classList.toggle('active');
+            this.setAttribute('aria-expanded', navMobile.classList.contains('active'));
             
             // Cambiar icono
             const icon = this.querySelector('i');
@@ -114,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMobile.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
                 const icon = menuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
@@ -205,13 +207,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if ('loading' in HTMLImageElement.prototype) {
         const images = document.querySelectorAll('img[loading="lazy"]');
         images.forEach(img => {
-            img.src = img.dataset.src;
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+            }
         });
     } else {
-        // Fallback para navegadores que no soportan lazy loading
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-        document.body.appendChild(script);
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.removeAttribute('loading');
+        });
     }
     
     // ==========================================
@@ -223,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 !menuToggle.contains(e.target) && 
                 navMobile.classList.contains('active')) {
                 navMobile.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
                 const icon = menuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
@@ -270,7 +274,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateActiveNavFromHash() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        const routeSegment = pathSegments[pathSegments.length - 1];
+        const currentPage = document.querySelector('.service-page')
+            ? (routeSegment === 'index.html' ? pathSegments[pathSegments.length - 2] : routeSegment) || 'extintores-trujillo'
+            : document.getElementById('productos-container') ? 'productos.html' : 'index.html';
         const currentHash = window.location.hash;
         
         if (currentPage === 'productos.html') {
@@ -278,11 +286,15 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (currentPage === 'index.html' || currentPage === '') {
             if (currentHash === '#contacto') {
                 setActiveNavigation('contacto');
+            } else if (currentHash === '#servicios') {
+                setActiveNavigation('servicios');
             } else if (currentHash === '#sobre-nosotros') {
                 setActiveNavigation('nosotros');
             } else {
                 setActiveNavigation('inicio');
             }
+        } else if (/^(extintores|venta-extintores|recarga-extintores|mantenimiento-extintores)-trujillo$/.test(currentPage)) {
+            setActiveNavigation('servicios');
         }
     }
     
@@ -304,6 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sections = [
             { id: 'inicio', nav: 'inicio' },
             { id: 'sobre-nosotros', nav: 'nosotros' },
+            { id: 'servicios', nav: 'servicios' },
             { id: 'contacto', nav: 'contacto' }
         ];
         

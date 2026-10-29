@@ -234,6 +234,9 @@ header.scrolled {
     border: 2px solid rgba(220, 38, 38, 0.2);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
 .social-icons a::before {
