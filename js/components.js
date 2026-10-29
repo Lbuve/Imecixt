@@ -6,32 +6,32 @@
 const headerHTML = `
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <div class="logo-icon">
                     <img src="img/logo.png" alt="IMECIXT Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
             </a>
             
             <nav class="nav-desktop">
-                <a href="index.html" data-nav="inicio">Inicio</a>
-                <a href="index.html#sobre-nosotros" data-nav="nosotros">Nosotros</a>
-                <a href="index.html#contacto" data-nav="contacto">Contacto</a>
+                <a href="/" data-nav="inicio">Inicio</a>
+                <a href="/#sobre-nosotros" data-nav="nosotros">Nosotros</a>
+                <a href="/#contacto" data-nav="contacto">Contacto</a>
                 <details class="nav-services">
                     <summary data-nav="servicios">Servicios</summary>
                     <div class="nav-services-menu">
-                        <a href="extintores-trujillo/index.html">Extintores en Trujillo</a>
-                        <a href="venta-extintores-trujillo/index.html">Venta de extintores</a>
-                        <a href="recarga-extintores-trujillo/index.html">Recarga de extintores</a>
-                        <a href="mantenimiento-extintores-trujillo/index.html">Mantenimiento</a>
-                        <a href="inspeccion-extintores-trujillo/index.html">Inspección</a>
-                        <a href="extintores-pqs-trujillo/index.html">Extintores PQS</a>
-                        <a href="extintores-co2-trujillo/index.html">Extintores CO2</a>
-                        <a href="extintores-para-restaurantes-trujillo/index.html">Para restaurantes</a>
-                        <a href="extintores-para-oficinas-trujillo/index.html">Para oficinas</a>
-                        <a href="extintores-para-empresas-trujillo/index.html">Para empresas</a>
+                        <a href="/extintores-trujillo/">Extintores en Trujillo</a>
+                        <a href="/venta-extintores-trujillo/">Venta de extintores</a>
+                        <a href="/recarga-extintores-trujillo/">Recarga de extintores</a>
+                        <a href="/mantenimiento-extintores-trujillo/">Mantenimiento</a>
+                        <a href="/inspeccion-extintores-trujillo/">Inspección</a>
+                        <a href="/extintores-pqs-trujillo/">Extintores PQS</a>
+                        <a href="/extintores-co2-trujillo/">Extintores CO2</a>
+                        <a href="/extintores-para-restaurantes-trujillo/">Para restaurantes</a>
+                        <a href="/extintores-para-oficinas-trujillo/">Para oficinas</a>
+                        <a href="/extintores-para-empresas-trujillo/">Para empresas</a>
                     </div>
                 </details>
-                <a href="productos.html" data-nav="productos">Productos</a>
+                <a href="/productos" data-nav="productos">Productos</a>
             </nav>
 
             <div class="social-icons">
@@ -49,25 +49,25 @@ const headerHTML = `
         </div>
         
         <nav class="nav-mobile" id="navMobile" aria-label="Navegación principal">
-            <a href="index.html" data-nav="inicio">Inicio</a>
-            <a href="index.html#sobre-nosotros" data-nav="nosotros">Nosotros</a>
-            <a href="index.html#contacto" data-nav="contacto">Contacto</a>
+            <a href="/" data-nav="inicio">Inicio</a>
+            <a href="/#sobre-nosotros" data-nav="nosotros">Nosotros</a>
+            <a href="/#contacto" data-nav="contacto">Contacto</a>
             <details class="nav-services">
                 <summary data-nav="servicios">Servicios</summary>
                 <div class="nav-services-menu">
-                    <a href="extintores-trujillo/index.html">Extintores en Trujillo</a>
-                    <a href="venta-extintores-trujillo/index.html">Venta de extintores</a>
-                    <a href="recarga-extintores-trujillo/index.html">Recarga de extintores</a>
-                    <a href="mantenimiento-extintores-trujillo/index.html">Mantenimiento</a>
-                    <a href="inspeccion-extintores-trujillo/index.html">Inspección</a>
-                    <a href="extintores-pqs-trujillo/index.html">Extintores PQS</a>
-                    <a href="extintores-co2-trujillo/index.html">Extintores CO2</a>
-                    <a href="extintores-para-restaurantes-trujillo/index.html">Para restaurantes</a>
-                    <a href="extintores-para-oficinas-trujillo/index.html">Para oficinas</a>
-                    <a href="extintores-para-empresas-trujillo/index.html">Para empresas</a>
+                    <a href="/extintores-trujillo/">Extintores en Trujillo</a>
+                    <a href="/venta-extintores-trujillo/">Venta de extintores</a>
+                    <a href="/recarga-extintores-trujillo/">Recarga de extintores</a>
+                    <a href="/mantenimiento-extintores-trujillo/">Mantenimiento</a>
+                    <a href="/inspeccion-extintores-trujillo/">Inspección</a>
+                    <a href="/extintores-pqs-trujillo/">Extintores PQS</a>
+                    <a href="/extintores-co2-trujillo/">Extintores CO2</a>
+                    <a href="/extintores-para-restaurantes-trujillo/">Para restaurantes</a>
+                    <a href="/extintores-para-oficinas-trujillo/">Para oficinas</a>
+                    <a href="/extintores-para-empresas-trujillo/">Para empresas</a>
                 </div>
             </details>
-            <a href="productos.html" data-nav="productos">Productos</a>
+            <a href="/productos" data-nav="productos">Productos</a>
             <div class="mobile-social">
                 <a href="https://www.facebook.com/share/1CnJvS297P/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i class="fab fa-facebook"></i> Facebook

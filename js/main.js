@@ -3,6 +3,22 @@
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.protocol === 'file:') {
+        document.querySelectorAll('a[href^="/"]').forEach(anchor => {
+            const target = new URL(anchor.getAttribute('href'), 'https://imecixt.com.pe');
+            let localPath = target.pathname.slice(1);
+
+            if (target.pathname === '/') {
+                localPath = 'index.html';
+            } else if (target.pathname === '/productos') {
+                localPath = 'productos.html';
+            } else if (target.pathname.endsWith('/')) {
+                localPath += 'index.html';
+            }
+
+            anchor.href = new URL(`${localPath}${target.search}${target.hash}`, document.baseURI).href;
+        });
+    }
     
     // ==========================================
     // SLIDER AUTOMÁTICO

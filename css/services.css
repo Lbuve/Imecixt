@@ -121,6 +121,21 @@
     text-underline-offset: 4px;
 }
 
+.home-services-list {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.home-services-list a {
+    color: #991b1b;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .home-faq {
     padding: 3rem 1rem;
     background: #fff;
