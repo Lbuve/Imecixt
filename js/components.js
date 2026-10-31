@@ -546,7 +546,7 @@ function mostrarDetallesVariante(nombreProducto, variantId) {
                         <a href="https://wa.me/51997437390?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(productoEncontrado.nombre + ' ' + varianteLabel)}"
                            target="_blank"
                            class="modal-btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
                         </a>
                         <button onclick="cerrarModal()" class="modal-btn-secondary">
                             Cerrar
