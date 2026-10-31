@@ -122,7 +122,7 @@ const footerHTML = `
             <div class="footer-section">
                 <h4>Contacto</h4>
                 <p><i class="fas fa-phone"></i> <a href="tel:+51997437390">997 437 390</a> / <a href="tel:+51979771512">979 771 512</a></p>
-                <p><i class="fas fa-envelope"></i> seguridad.imeci@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> imecixt@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Federico Villarreal, Trujillo 13001<br>Au. Panamericana S/N, Moche 13014 - Perú</p>
             </div>
             

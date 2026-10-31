@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     console.log('✅ Catálogo de Seguridad 2025 - IMECIXT - Cargado correctamente');
     console.log('📱 WhatsApp: +51 997 437 390 / +51 979 771 512');
-    console.log('📧 Email: seguridad.imeci@gmail.com');
+    console.log('📧 Email: imecixt@gmail.com');
     
     // ==========================================
     // ACTIVE NAVIGATION HIGHLIGHT
