@@ -267,7 +267,7 @@
     max-width: 100%;
     max-height: 360px;
     padding: 0;
-    border: 1px solid color-mix(in srgb, var(--service-accent, #dc2626) 42%, transparent);
+    border: 3px solid var(--service-frame-color, var(--service-accent, #dc2626));
     border-radius: 1rem;
     background: transparent;
     box-shadow: 0 8px 24px color-mix(in srgb, var(--service-accent, #dc2626) 26%, transparent);
@@ -530,60 +530,70 @@
 .service-page[data-service="extintores"] {
     --service-gradient: linear-gradient(120deg, #7f1d1d, #dc3b32);
     --service-accent: #b91c1c;
+    --service-frame-color: #ef4444;
     --service-image-glow: rgba(239, 68, 68, 0.28);
 }
 
 .service-page[data-service="venta"] {
     --service-gradient: linear-gradient(120deg, #9a3412, #ea6a1a);
     --service-accent: #c2410c;
+    --service-frame-color: #f97316;
     --service-image-glow: rgba(249, 115, 22, 0.28);
 }
 
 .service-page[data-service="recarga"] {
     --service-gradient: linear-gradient(120deg, #7f1d1d, #c2410c);
     --service-accent: #b91c1c;
+    --service-frame-color: #c2410c;
     --service-image-glow: rgba(220, 60, 35, 0.28);
 }
 
 .service-page[data-service="mantenimiento"] {
     --service-gradient: linear-gradient(120deg, #7f1d1d, #c93632);
     --service-accent: #b91c1c;
+    --service-frame-color: #dc3b32;
     --service-image-glow: rgba(220, 60, 50, 0.28);
 }
 
 .service-page[data-service="inspeccion"] {
     --service-gradient: linear-gradient(120deg, #7f1d1d, #dc3b32);
     --service-accent: #b91c1c;
+    --service-frame-color: #ef4444;
     --service-image-glow: rgba(239, 68, 68, 0.28);
 }
 
 .service-page[data-service="pqs"] {
     --service-gradient: linear-gradient(120deg, #7f1d1d, #d94832);
     --service-accent: #b91c1c;
+    --service-frame-color: #dc3b32;
     --service-image-glow: rgba(239, 68, 68, 0.28);
 }
 
 .service-page[data-service="co2"] {
     --service-gradient: linear-gradient(120deg, #374151, #64748b);
     --service-accent: #64748b;
+    --service-frame-color: #94a3b8;
     --service-image-glow: rgba(203, 213, 225, 0.24);
 }
 
 .service-page[data-service="restaurantes"] {
     --service-gradient: linear-gradient(120deg, #881337, #dc3b45);
     --service-accent: #be123c;
+    --service-frame-color: #fb7185;
     --service-image-glow: rgba(244, 63, 94, 0.28);
 }
 
 .service-page[data-service="oficinas"] {
     --service-gradient: linear-gradient(120deg, #374151, #64748b);
     --service-accent: #64748b;
+    --service-frame-color: #94a3b8;
     --service-image-glow: rgba(203, 213, 225, 0.24);
 }
 
 .service-page[data-service="empresas"] {
     --service-gradient: linear-gradient(120deg, #7f1d1d, #c2410c);
     --service-accent: #b91c1c;
+    --service-frame-color: #c2410c;
     --service-image-glow: rgba(220, 60, 35, 0.28);
 }
 
