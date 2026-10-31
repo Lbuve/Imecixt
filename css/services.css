@@ -267,11 +267,14 @@
     max-width: 100%;
     max-height: 360px;
     padding: 0;
-    border: 2px solid color-mix(in srgb, var(--service-accent, #dc2626) 58%, white);
+    border: 1px solid color-mix(in srgb, var(--service-accent, #dc2626) 42%, transparent);
     border-radius: 1rem;
     background: transparent;
-    box-shadow: 0 8px 22px color-mix(in srgb, var(--service-accent, #dc2626) 22%, transparent);
-    clip-path: inset(0 round 1rem);
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--service-accent, #dc2626) 26%, transparent);
+    filter:
+        saturate(0.94)
+        drop-shadow(0 0 20px var(--service-image-glow, rgba(255, 255, 255, 0.18)))
+        drop-shadow(0 10px 14px rgba(15, 23, 42, 0.14));
     object-fit: contain;
     object-position: center;
 }
@@ -525,63 +528,63 @@
 }
 
 .service-page[data-service="extintores"] {
-    --service-gradient: linear-gradient(120deg, #991b1b, #ef4444);
-    --service-accent: #dc2626;
-    --service-image-glow: rgba(239, 68, 68, 0.32);
+    --service-gradient: linear-gradient(120deg, #7f1d1d, #dc3b32);
+    --service-accent: #b91c1c;
+    --service-image-glow: rgba(239, 68, 68, 0.28);
 }
 
 .service-page[data-service="venta"] {
-    --service-gradient: linear-gradient(120deg, #9a3412, #f97316);
-    --service-accent: #ea580c;
-    --service-image-glow: rgba(249, 115, 22, 0.3);
+    --service-gradient: linear-gradient(120deg, #9a3412, #ea6a1a);
+    --service-accent: #c2410c;
+    --service-image-glow: rgba(249, 115, 22, 0.28);
 }
 
 .service-page[data-service="recarga"] {
-    --service-gradient: linear-gradient(120deg, #1d4ed8, #06b6d4);
-    --service-accent: #0891b2;
-    --service-image-glow: rgba(6, 182, 212, 0.34);
+    --service-gradient: linear-gradient(120deg, #7f1d1d, #c2410c);
+    --service-accent: #b91c1c;
+    --service-image-glow: rgba(220, 60, 35, 0.28);
 }
 
 .service-page[data-service="mantenimiento"] {
-    --service-gradient: linear-gradient(120deg, #166534, #22c55e);
-    --service-accent: #16a34a;
-    --service-image-glow: rgba(34, 197, 94, 0.3);
+    --service-gradient: linear-gradient(120deg, #7f1d1d, #c93632);
+    --service-accent: #b91c1c;
+    --service-image-glow: rgba(220, 60, 50, 0.28);
 }
 
 .service-page[data-service="inspeccion"] {
-    --service-gradient: linear-gradient(120deg, #6b21a8, #a855f7);
-    --service-accent: #9333ea;
-    --service-image-glow: rgba(168, 85, 247, 0.3);
+    --service-gradient: linear-gradient(120deg, #7f1d1d, #dc3b32);
+    --service-accent: #b91c1c;
+    --service-image-glow: rgba(239, 68, 68, 0.28);
 }
 
 .service-page[data-service="pqs"] {
-    --service-gradient: linear-gradient(120deg, #854d0e, #eab308);
-    --service-accent: #ca8a04;
-    --service-image-glow: rgba(234, 179, 8, 0.32);
+    --service-gradient: linear-gradient(120deg, #7f1d1d, #d94832);
+    --service-accent: #b91c1c;
+    --service-image-glow: rgba(239, 68, 68, 0.28);
 }
 
 .service-page[data-service="co2"] {
-    --service-gradient: linear-gradient(120deg, #0f766e, #14b8a6);
-    --service-accent: #0d9488;
-    --service-image-glow: rgba(20, 184, 166, 0.3);
+    --service-gradient: linear-gradient(120deg, #374151, #64748b);
+    --service-accent: #64748b;
+    --service-image-glow: rgba(203, 213, 225, 0.24);
 }
 
 .service-page[data-service="restaurantes"] {
-    --service-gradient: linear-gradient(120deg, #be123c, #fb7185);
-    --service-accent: #e11d48;
-    --service-image-glow: rgba(251, 113, 133, 0.3);
+    --service-gradient: linear-gradient(120deg, #881337, #dc3b45);
+    --service-accent: #be123c;
+    --service-image-glow: rgba(244, 63, 94, 0.28);
 }
 
 .service-page[data-service="oficinas"] {
-    --service-gradient: linear-gradient(120deg, #4338ca, #818cf8);
-    --service-accent: #4f46e5;
-    --service-image-glow: rgba(129, 140, 248, 0.3);
+    --service-gradient: linear-gradient(120deg, #374151, #64748b);
+    --service-accent: #64748b;
+    --service-image-glow: rgba(203, 213, 225, 0.24);
 }
 
 .service-page[data-service="empresas"] {
-    --service-gradient: linear-gradient(120deg, #334155, #64748b);
-    --service-accent: #475569;
-    --service-image-glow: rgba(148, 163, 184, 0.32);
+    --service-gradient: linear-gradient(120deg, #7f1d1d, #c2410c);
+    --service-accent: #b91c1c;
+    --service-image-glow: rgba(220, 60, 35, 0.28);
 }
 
 @media (max-width: 640px) {
