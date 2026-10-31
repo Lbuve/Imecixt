@@ -136,6 +136,55 @@
     text-underline-offset: 3px;
 }
 
+.catalog-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    background: #f8fafc;
+}
+
+.catalog-showcase-copy {
+    padding: 1rem;
+}
+
+.catalog-showcase-copy > p {
+    margin-bottom: 0.5rem;
+    color: #991b1b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.catalog-showcase-copy h2 {
+    margin-bottom: 0.75rem;
+    color: #1f2937;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.catalog-showcase-copy span {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.catalog-showcase > img {
+    display: block;
+    width: 100%;
+    height: clamp(220px, 32vw, 360px);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background: #fff;
+    object-fit: contain;
+}
+
 .home-faq {
     padding: 3rem 1rem;
     background: #fff;
@@ -192,27 +241,28 @@
 }
 
 .service-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1.5rem 1.5rem 2rem;
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding-bottom: 2rem;
     background: var(--service-gradient, linear-gradient(120deg, #991b1b, #dc2626));
 }
 
 .service-hero-image {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
     z-index: 1;
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    justify-self: center;
+    align-self: center;
     box-sizing: border-box;
-    width: 33%;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 0.9rem;
-    background: #fff;
-    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.2);
-    filter: saturate(1.05);
-    object-fit: cover;
+    width: 100%;
+    height: clamp(240px, 29vw, 360px);
+    max-height: 100%;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -223,7 +273,7 @@
 
 .service-page[data-service="mantenimiento"] .service-hero-image,
 .service-page[data-service="empresas"] .service-hero-image {
-    object-position: right center;
+    object-position: center;
 }
 
 .service-hero > h1,
@@ -231,18 +281,19 @@
 .service-hero > .service-actions {
     position: relative;
     z-index: 2;
+    grid-column: 1;
     box-sizing: border-box;
-    width: 64%;
+    width: 100%;
     margin: 0;
-    padding-right: clamp(1.25rem, 5vw, 3.5rem);
-    padding-left: clamp(1.25rem, 5vw, 3.5rem);
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     background: transparent;
     color: #fff;
 }
 
 .service-hero > h1 {
     isolation: isolate;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     padding-bottom: 0.75rem;
     font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 800;
@@ -276,7 +327,7 @@
 
 .service-hero > .service-actions {
     display: flex;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .service-content > h2,
@@ -515,12 +566,36 @@
 }
 
 @media (max-width: 640px) {
+    .catalog-showcase {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .catalog-showcase-copy {
+        padding: 0.75rem;
+    }
+
+    .catalog-showcase > img {
+        height: auto;
+        max-height: min(90vw, 360px);
+    }
+
     .service-page {
         padding: 6.5rem 0.75rem 2rem;
     }
 
     .service-actions {
         flex-direction: column;
+    }
+
+    .service-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 0 1rem;
     }
 
     .service-action {
@@ -532,18 +607,13 @@
     }
 
     .service-hero > .service-hero-image {
-        position: relative;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        display: block;
-        width: 100%;
-        height: 210px;
-        margin: 0;
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        object-fit: cover;
+        order: -1;
+        align-self: center;
+        width: min(100% - 1.5rem, 360px);
+        height: auto;
+        max-height: min(90vw, 360px);
+        margin: 0.75rem auto 0;
+        object-fit: contain;
     }
 
     .service-hero > .service-hero-product {
